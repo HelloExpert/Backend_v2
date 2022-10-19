@@ -1,0 +1,13 @@
+package com.fontys.helloexpert;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class HelloExpertApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+
+}
