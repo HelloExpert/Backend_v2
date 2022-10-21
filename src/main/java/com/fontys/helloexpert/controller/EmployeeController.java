@@ -30,8 +30,7 @@ public class EmployeeController {
     @GetMapping("/find/{id}")
     public ResponseEntity<Employee> getEmployeeById(@PathVariable("id") Long id) {
         Employee employee = employeeService.findEmployeeById(id);
-        //return new ResponseEntity<>(employee, HttpStatus.OK);
-        return ResponseEntity.ok(employee); // easier? // todo check if this works the same.
+        return ResponseEntity.ok(employee);
     }
 
     @PostMapping("/add")
@@ -46,7 +45,7 @@ public class EmployeeController {
         return new ResponseEntity<>(updateEmployee, HttpStatus.OK);
     }
 
-    @PutMapping("/delete/{id}")
+    @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> deleteEmployee(@PathVariable("id") Long id) {
        employeeService.deleteEmployee(id);
         return new ResponseEntity<>(HttpStatus.OK);
